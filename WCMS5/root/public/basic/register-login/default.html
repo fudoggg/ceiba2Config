@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <meta name="renderer" content="webkit" />
+        <meta http-equiv="Cache-Control" content="no-siteapp" />
+        <title data-lang="appName"></title>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <!--golobal -->
+        <link
+            rel="stylesheet"
+            href="/third-resource/metronic47/global/plugins/font-awesome/css/font-awesome.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="/third-resource/metronic47/global/plugins/simple-line-icons/simple-line-icons.min.css"
+        />
+        <link rel="stylesheet" href="/third-resource/metronic47/global/plugins/bootstrap/css/bootstrap.min.css" />
+        <!--page plugin-->
+        <link rel="stylesheet" href="/third-resource/metronic47/global/plugins/select2/css/select2.min.css" />
+        <link
+            rel="stylesheet"
+            href="/third-resource/metronic47/global/plugins/select2/css/select2-bootstrap.min.css"
+        />
+        <!--theme global-->
+        <link rel="stylesheet" href="/third-resource/metronic47/global/css/components.min.css" />
+        <!--page level-->
+        <link rel="stylesheet" type="text/css" href="/basic/register-login/style/default.css" />
+    </head>
+
+    <body class="login">
+        <!-- BEGIN LOGIN -->
+        <div id="center">
+            <div class="leftContent">
+                <h1><span data-lang="welcomeText"></span></h1>
+            </div>
+            <div class="content">
+                <!-- BEGIN LOGIN FORM -->
+                <div class="login-form">
+                    <h3 class="form-title font-green"><span data-lang="welcomeLogin"></span></h3>
+                    <div class="alert alert-danger display-hide">
+                        <button class="close" data-close="alert"></button>
+                        <span data-lang="inputEmptyTip"></span>
+                    </div>
+                    <div class="form-group">
+                        <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
+                        <label class="control-label visible-ie8 visible-ie9"><span data-lang="userName"></span></label>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-user"></i>
+                            </span>
+                            <input
+                                id="inp_account"
+                                class="form-control form-control-solid placeholder-no-fix"
+                                type="text"
+                                data-lang="userName"
+                                autocomplete="off"
+                                placeholder=""
+                            />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label visible-ie8 visible-ie9"><span data-lang="password"></span></label>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-keyboard-o"></i>
+                            </span>
+                            <input
+                                id="inp_password"
+                                class="form-control form-control-solid placeholder-no-fix"
+                                type="password"
+                                data-lang="password"
+                                autocomplete="off"
+                                placeholder=""
+                            />
+                        </div>
+                    </div>
+                    <div class="form-group display-hide" id="div_authcode">
+                        <label class="control-label visible-ie8 visible-ie9"><span data-lang="authCode"></span></label>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-barcode"></i>
+                            </span>
+                            <input
+                                id="inp_authcode"
+                                class="form-control form-control-solid placeholder-no-fix ignore"
+                                type="text"
+                                data-lang="authCode"
+                                autocomplete="off"
+                                placeholder=""
+                            />
+                            <span class="input-group-btn">
+                                <img id="img_authcode" src="" class="authCode" data-lang="clickChange" />
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group display-hide" id="div_slideauthcode">
+                        <div id="div_authcodebar">
+                            <div style="margin-left: 50px; margin-top: 5px">
+                                <span id="span_authcodetip"> </span>
+                            </div>
+                            <div id="div_authcodecontrol"></div>
+                            <div class="display-hide" id="div_authcodeimg"></div>
+                            <div style="position: absolute; left: 100%; top: -2px">
+                                <button id="btn_authstate" class="btn btn-circle btn-icon-only blue">
+                                    <i class="glyphicon glyphicon-lock"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group" style="display: none">
+                        <label class="control-label visible-ie8 visible-ie9"><span data-lang="lowVerTip"></span></label>
+                        <select name="country" id="country_list" class="select2 form-control">
+                            <option value="zh-CN">简体中文</option>
+                            <option value="en-US">English</option>
+                        </select>
+                    </div>
+                    <div class="form-actions">
+                        <div class="row">
+                            <div class="col-md-4"></div>
+                            <div class="col-md-4">
+                                <button id="button_login" type="submit" class="btn green uppercase btn-block">
+                                    <span data-lang="login"></span>
+                                </button>
+                            </div>
+                            <!--<div class="col-md-12">
+                            <button id="button_login" type="submit" class="btn green uppercase"><span data-lang="login"></span></button>
+                            <label class="rememberme check mt-checkbox mt-checkbox-outline">
+                                <input type="checkbox" name="Remember" value="1" />
+                                <span></span>
+                            </label>
+                            <span data-lang="rememberme" style="margin-left:-5px;"></span>
+                        </div>-->
+                        </div>
+                    </div>
+                </div>
+                <!-- END LOGIN FORM -->
+            </div>
+        </div>
+        <div class="mt-cookie-consent-bar" style="top: 15px; height: 50px; display: none">
+            <div class="container">
+                <div class="mt-cookie-consent-bar-holder">
+                    <div class="mt-cookie-consent-bar-content" style="text-align: center">
+                        <span data-lang="lowVerTip"></span>
+                    </div>
+                    <div class="mt-cookie-consent-bar-action">
+                        <a href="http://www.firefox.com.cn/" class="mt-cookie-consent-btn btn blue">Chrome</a>
+                        <a
+                            href="http://www.google.cn/chrome/browser/desktop/"
+                            class="mt-cookie-consent-btn btn yellow-gold"
+                            >Firefox</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--[if lt IE 9]>
+            <script src="/third-resource/metronic47/global/plugins/respond.min.js"></script>
+            <script src="/third-resource/metronic47/global/plugins/excanvas.min.js"></script>
+        <![endif]-->
+        <!--core plugin-->
+        <script type="text/javascript" src="/third-resource/metronic47/global/plugins/jquery.min.js"></script>
+        <script
+            type="text/javascript"
+            src="/third-resource/metronic47/global/plugins/bootstrap/js/bootstrap.min.js"
+        ></script>
+        <script type="text/javascript" src="/third-resource/metronic47/global/plugins/js.cookie.min.js"></script>
+        <!--page level plugin-->
+        <script
+            type="text/javascript"
+            src="/third-resource/metronic47/global/plugins/jquery-validation/js/jquery.validate.min.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="/third-resource/metronic47/global/plugins/select2/js/select2.full.min.js"
+        ></script>
+        <!--theme global-->
+        <script type="text/javascript" src="/third-resource/metronic47/global/scripts/app.min.js"></script>
+        <!--page level-->
+        <script type="text/javascript" src="/third-resource/base64/base64.min.js"></script>
+        <script type="text/javascript" src="/third-resource/jsencrypt/jsencrypt.min.js"></script>
+        <script type="text/javascript" src="/third-resource/crypto/crypto-js.js"></script>
+        <script type="text/javascript" src="/common/app-config.js"></script>
+        <script type="text/javascript" src="/basic/register-login/script/default.js"></script>
+    </body>
+</html>

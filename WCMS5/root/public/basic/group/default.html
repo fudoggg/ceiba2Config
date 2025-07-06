@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html style="width:100%;height:100%;">
+    <head>
+    	<meta charset="utf-8" />
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+    	<meta name="renderer" content="webkit">
+        <meta http-equiv="Cache-Control" content="no-siteapp" />
+        
+        <link rel="stylesheet" type="text/css" href="/third-resource/metronic47/global/plugins/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="/third-resource/metronic47/global/plugins/simple-line-icons/simple-line-icons.min.css">
+        <link rel="stylesheet" type="text/css" href="/third-resource/metronic47/global/plugins/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/third-resource/metronic47/global/css/components.min.css">
+        <link rel="stylesheet" type="text/css" href="/third-resource/metronic47/global/css/plugins.min.css">
+        <link rel="stylesheet" type="text/css" href="/third-resource/metronic47/layouts/layout/css/layout.min.css">
+        <link rel="stylesheet" type="text/css" href="/third-resource/metronic47/layouts/layout/css/themes/default.min.css">
+         <link rel="stylesheet" type="text/css" href="/third-resource/lava/style/jquery.table.css" /> 
+        <!-- <link rel="stylesheet" type="text/css" href="../../third-resource/lavaui/plugins/lava/css/table.css"" />更换不行 -->
+        <link rel="stylesheet" type="text/css" href="/third-resource/zTreeV3/css/metroStyle/metroStyle.css" />
+        <!--<link rel="stylesheet" href="../third-resource/lava/style/jquery.lava-loading.css">-->
+        <link rel="stylesheet" type="text/css" href="/basic/group/style/default.css">
+         <!-- <link rel="stylesheet" type="text/css" href="../theme.css">  -->
+        <!-- tppabs="[a-zA-z]+://[^\s]* -->
+    </head>
+    <body class="container page-container-bg-solid" style="width:100%;height:100%; padding:10px;">
+        <div class="page-content">
+        <div class="" style="position:relative;">
+            <div class="col-lg-3 col-md-4 col-sm-4" id="div_tree">
+                <div class="portlet light bordered portlet-fit full-height-content" style="margin-top:20px;">
+                    <div class="portlet-title">
+                        <div class="caption font-blue">
+                            <span class="caption-subject bold">
+                                <i class="icon-folder-alt font-blue"></i> 
+                                <span data-lang="M_12">
+                                </span>
+                            </span>
+                        </div>
+                        <div class="actions">
+                            <a href="javascript:;" class="font-blue" id="a_close"><i class="fa fa-angle-double-left"></i></a>
+                        </div>
+                    </div>
+                    <div class="portlet-body" style="overflow:auto;height:0;">
+                        <div class="loader"></div>
+                        <ul id="ul_tree" class="ztree"></ul>
+                    </div>
+                </div>
+            </div>
+            <div id="div_open" class="bg-blue bg-font-blue" style="position:absolute;margin-top:20px;padding:24px 2px;top:0;left:0;z-index:100;cursor:pointer;display:none;">
+                <i class="fa fa-angle-double-right"></i>
+            </div>
+            <div class="col-lg-9 col-md-8 col-sm-8" id="div_content">
+                <div class="portlet light bordered portlet-fit full-height-content" style="margin-top:20px;">
+                    <div class="portlet-title">
+                            <div class="col-md-12">
+                            <div class="form-inline" style="padding:2px 0;">
+                                <button type="button" class="btn blue sbold" id="btn_addgroup"><i class="glyphicon glyphicon-plus"></i> <span data-lang="add"></span></button>
+                                <div class="pull-right" style="margin-left:20px;">
+                                    <div class="btn-group">
+                                        <button type="button" id="dropdown1" class="btn btn-outline blue dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="glyphicon glyphicon-wrench"></i> <i class="fa fa-angle-down"></i></button>
+                                        <ul class="dropdown-menu pull-right" aria-labelledby="dropdown1">
+                                            <li><a href="javascript:;" onclick="group.page.table.deleteGroup()"><i class="fa fa-close"></i> <span data-lang="delete"></span></a></li>
+                                            <!--<li><a href="javascript:;" onclick="group.page.table.importData()"><i class="fa fa-download"></i> 导入</a></li>
+                                            <li><a href="javascript:;" onclick="group.page.table.exportData()"><i class="fa fa-share-square-o"></i> 导出</a></li>-->
+                                            <li><a href="javascript:;" id="a_print"><i class="fa fa-print"></i> <span data-lang="print"></span></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="btn-group">
+                                        <button type="button" id="dropdown2" class="btn btn-outline blue dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-list"></i> <i class="fa fa-angle-down"></i></button>
+                                    </div>
+                                </div>
+                                <div class="form-group pull-right">
+                                    <div class="input-icon right">
+                                        <i class="fa fa-search" style="cursor:pointer;" onclick='group.page.table.searchGroup()'></i>
+                                        <input type="text" id="inp_search" class="form-control" style="width:250px;" data-lang="typeGroupNamePrompt" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portlet-body" style="height:0;">
+                            <table id="tb_grid">
+                            <thead>
+                                <tr>
+                                    <th data-field="checkbox"><span class="span-checkbox"></span></th>
+                                    <th data-field="operate"><span data-lang="operate"></span></th>
+                                    <th data-field="name"><span data-lang="groupName"></span></th>
+                                    <th data-field="pname"><span data-lang="uppperLevelGroup"></span></th>
+                                    <!--<th data-field="limitNum">限制车辆数</th>
+                                    <th data-field="type">类型</th>
+                                    <th data-field="industry">所属行业</th>
+                                    <th data-field="phone">联系电话</th>
+                                    <th data-field="address">地址</th>-->
+                                    <th data-field="remark"><span data-lang="remark"></span></th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="modal fade in" id="modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header ">
+                        <button type="button" class="close" aria-hidden="true" data-dismiss="modal"></button>
+                        <h4 class="modal-title bold font-blue"><i class="fa fa-folder-open-o"></i> <span id="span_modaltitle" data-lang="add"></span></h4>
+                    </div>
+                    <div class="modal-body" style="overflow:auto;">
+                        <form class="form" id="form_group" role="form" action="" method="post">
+                            <div class="form-group">
+                                <label for="inp_groupname" class="control-label"><span data-lang="groupName"></span><span class="required"> *</span></label>
+                                <div class="input-icon right">
+                                    <i class="fa fa-tag font-yellow-saffron"></i>
+                                    <input type="text" class="form-control" id="inp_groupname" name="name" />
+                                    <input type="hidden" class="form-control" id="inp_groupid" name="id" />
+                                </div>
+                            </div>
+                            <div class="form-group" id="div_group">
+                                <label for="inp_parentgroup" class="control-label"><span data-lang="uppperLevelGroup"></span><span class="required"> *</span></label>
+                                <div class="input-group">
+                                    <input type="text" id="inp_parentgroup" name="pname" class="form-control" style="background-color:#fff;" readonly="true" />
+                                    <input type="hidden" id="inp_parentid" name="pid" class="form-control" style="background-color:#fff;" readonly="true" />
+                                    <span class="input-group-btn" style="vertical-align:bottom;">
+                                        <button id="btn_chooseparent" type="button" class="btn default"><i class="fa fa-ellipsis-h"></i></button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inp_desc" class="control-label"><span data-lang="remark"></span>&nbsp;</label>
+                                <textarea type="text" id="inp_desc" name="remark" class="form-control" rows="5" maxlength="250"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn blue" id="btn_submitgroup"><i class="fa fa-check"></i><span data-lang="sure"></span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="div_parentgroup" class="modal fade in" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" aria-hidden="true" data-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body" style="overflow:auto;height:408px;">
+                        <ul id="ul_parentgroup" class="ztree"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--<div id="div_import" class="modal fade in" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" aria-hidden="true" data-dismiss="modal"></button>
+                        <h4 class="modal-title">导入</h4>
+                    </div>
+                    <div class="modal-body" style="overflow:auto;">
+                        <div id="div_upload"><i class="fa fa-upload"></i> 上传</div>
+                        <div id="div_filelist" style="margin-top:20px;display:none;">
+                            <div id="div_filename" style="margin-bottom:10px;"></div>
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-success" id="div_progressbar" style="width:0;"></div>
+                                    </div> 
+                                </div>
+                                <div class="col-md-3">
+                                    <div id="div_state"></div>
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="button" class="btn red" onclick="window.groupInfo.cancelUpload()">取消</button>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-1" style="padding-left:0;">
+                                <span id="span_state"></span>
+                            </div> 
+                        </div>
+                    </div>
+                     <div class="modal-footer">
+                        <button type="button" class="btn blue">确定</button>
+                    </div> 
+                </div>
+            </div>
+        </div>-->
+        <!--[if lt IE 9]>
+        <script src="/third-resource/metronic47/global/plugins/respond.min.js"></script>
+        <script src="/third-resource/metronic47/global/plugins/excanvas.min.js"></script> 
+        <![endif]-->
+        <script type="text/javascript" src="/third-resource/metronic47/global/plugins/jquery.min.js"></script>
+        <script charset="utf-8" src="/third-resource/metronic47/global/plugins/bootstrap/js/bootstrap.min.js"></script>
+        <script charset="utf-8" src="/third-resource/metronic47/global/plugins/js.cookie.min.js"></script>
+        <script charset="utf-8" src="/third-resource/metronic47/global/scripts/app.min.js"></script>
+        <script charset="utf-8" src="/third-resource/metronic47/global/plugins/jquery-validation/js/jquery.validate.min.js"></script>
+        <script charset="utf-8" src="/third-resource/metronic47/layouts/layout/scripts/layout.min.js"></script>
+        <!--begin page script-->
+        <script charset="utf-8" src="/third-resource/metronic47/global/plugins/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
+         <script charset="utf-8" src="/third-resource/lava/jquery.lava-table.js"></script> 
+        <!-- <script charset="utf-8" src="../../third-resource/lavaui/plugins/lava/js/table.js"></script> 更换不行-->
+        <script charset="utf-8" src="/third-resource/lava/jquery.lava-msg.js"></script>
+        <script charset="utf-8" src="/third-resource/zTreeV3/js/jquery.ztree.all.min.js"></script>
+        <!--end page script-->
+        <script charset="utf-8" src="/common/app-config.js"></script>
+        <!--<script type="text/javascript" src="../third-resource/lava/jquery.lava-loading.js"></script>-->
+        <script type="text/javascript" src="/basic/group/script/default.js"></script>
+        
+    </body>
+</html>

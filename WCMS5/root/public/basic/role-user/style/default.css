@@ -1,0 +1,34 @@
+.ztree li .button {
+	vertical-align:initial;
+}
+
+.glyphicon {
+  font-family: 'Glyphicons Halflings';
+}
+.form-group p {
+	margin:5px 0 0 0;
+}
+table .fa {
+	font-size:16px;
+	cursor: pointer;
+}
+table .fa-edit {
+	color:#07d;
+}
+table .fa-trash-o {
+	color:#b40;
+}
+table .fa-chain-broken {
+	color: #f90808;
+}
+#div_addrole .mt-checkbox {
+	margin-bottom:5px;
+}
+.ztree li a.curSelectedNode {
+	background-color: #FFE6B0;
+	border: 1px solid #FFB951;
+}
+.sp_channel {
+	display: inline-block;
+	width: 17px;
+}

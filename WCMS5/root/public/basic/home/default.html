@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html data-lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html data-lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <meta name="renderer" content="webkit" />
+        <meta http-equiv="Cache-Control" content="no-siteapp" />
+        <title data-lang="appName"></title>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <script>
+            if (!document.cookie || document.cookie.indexOf('wcms5u') == -1) {
+                window.location.href = '/basic/register-login/default.html';
+            }
+        </script>
+        <!--golobal -->
+        <link
+            rel="stylesheet"
+            href="/third-resource/metronic47/global/plugins/font-awesome/css/font-awesome.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="/third-resource/metronic47/global/plugins/simple-line-icons/simple-line-icons.min.css"
+        />
+        <link rel="stylesheet" href="/third-resource/metronic47/global/plugins/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/third-resource/metronic47/global/css/components.min.css" />
+        <!--page plugin-->
+        <link rel="stylesheet" type="text/css" href="/third-resource/zTreeV3/css/metroStyle/metroStyle.css" />
+        <link rel="stylesheet" href="/third-resource/lava/style/jquery.lava-tabs.css" />
+        <!--theme global-->
+
+        <!--theme layout-->
+        <link rel="stylesheet" href="/third-resource/metronic47/layouts/layout/css/layout.min.css" />
+        <link rel="stylesheet" href="/third-resource/metronic47/layouts/layout/css/themes/blue.min.css" />
+        <link rel="stylesheet" type="text/css" href="/basic/home/style/default.css" />
+        <script type="text/javascript" src="/third-resource/metronic47/global/plugins/jquery.min.js"></script>
+        <script type="text/javascript" src="/third-resource/metronic47/global/plugins/js.cookie.min.js"></script>
+        <script type="text/javascript" src="/common/app-config.js"></script>
+        <script type="text/javascript" src="/third-resource/jsencrypt/jsencrypt.min.js"></script>
+    </head>
+
+    <body
+        class="page-header-fixed page-sidebar-closed-hide-logo page-content-white page-footer-fixed page-sidebar-closed"
+    >
+        <div class="page-wrapper" style="overflow: auto">
+            <!-- BEGIN HEADER -->
+            <div class="page-header navbar navbar-fixed-top">
+                <!-- BEGIN HEADER INNER -->
+                <div class="page-header-inner">
+                    <!-- BEGIN LOGO -->
+                    <div class="page-logo">
+                        <!--<a href="javascript:;">
+                        <img src="../../images/logo-big.png" alt="logo" class="logo-default" style="margin-left:20px;"/>
+                        
+                    </a>-->
+                        <span></span>
+                        <!--<div class="menu-toggler sidebar-toggler">
+                        <span></span>
+                    </div>-->
+                    </div>
+                    <!-- END LOGO -->
+                    <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+                    <a
+                        href="javascript:;"
+                        class="menu-toggler responsive-toggler"
+                        data-toggle="collapse"
+                        data-target=".navbar-collapse"
+                    >
+                        <span></span>
+                    </a>
+                    <!-- END RESPONSIVE MENU TOGGLER -->
+                    <div class="page-top">
+                        <!-- BEGIN TOP NAVIGATION MENU -->
+                        <div class="top-menu">
+                            <ul class="nav navbar-nav pull-right" style="font-family: arial">
+                                <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                                <li class="dropdown" style="display: none">
+                                    <a
+                                        href="javascript:;"
+                                        id="a_face_todo"
+                                        style="padding-right: 16px; padding-top: 25px"
+                                        class="dropdown-toggle"
+                                        data-toggle="dropdown"
+                                        data-hover="dropdown"
+                                        data-close-others="true"
+                                        aria-expanded="false"
+                                    >
+                                        <label class="pic-facetodo"></label>
+                                        <span class="badge badge-danger"> 0 </span>
+                                    </a>
+                                </li>
+                                <li class="dropdown">
+                                    <a
+                                        href="javascript:;"
+                                        id="a_alarm"
+                                        class="dropdown-toggle hidden"
+                                        data-toggle="dropdown"
+                                        data-hover="dropdown"
+                                        data-close-others="true"
+                                        aria-expanded="false"
+                                    >
+                                        <i class="icon-bell"></i>
+                                        <span class="badge badge-danger"> 0 </span>
+                                    </a>
+                                    <ul class="dropdown-menu font-blue-hoki" id="ul_alarm" style="width: 350px">
+                                        <a
+                                            class="btn btn-xs green hidden"
+                                            href="javascript:;"
+                                            id="a_detail"
+                                            style="margin: 5px 0 0 140px"
+                                            ><span data-lang="viewDetail"></span
+                                        ></a>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a
+                                        href="javascript:;"
+                                        id="a_download"
+                                        class="dropdown-toggle hidden"
+                                        data-toggle="dropdown"
+                                        data-hover="dropdown"
+                                        data-close-others="true"
+                                        aria-expanded="false"
+                                    >
+                                        <i class="icon-cloud-download"></i>
+                                        <span class="badge badge-default"> 0 </span>
+                                    </a>
+                                    <ul class="dropdown-menu" id="ul_download">
+                                        <div
+                                            class="scroller"
+                                            style="height: 380px"
+                                            data-rail-visible="1"
+                                            data-rail-color="yellow"
+                                            data-handle-color="#a1b2bd"
+                                        >
+                                            <div style="height: 355px; overflow: auto">
+                                                <table id="tb_download" class="table table-striped table-condensed">
+                                                    <!--<thead>
+                                                <tr>
+                                                    <th><span>任务</span></th>
+                                                    <th><span>进度</span></th>
+                                                    <th><span>状态</span></th>
+                                                    <th><span>文件列表</span></th>
+                                                    <th><span>操作</span></th>
+                                                </tr>
+                                            </thead>-->
+                                                    <tbody></tbody>
+                                                </table>
+                                            </div>
+                                            <!--  翻页操作按钮 -->
+                                            <div id="downloadPageDiv">
+                                                <span data-lang="total"></span>
+                                                <!-- 总数 -->
+                                                <span id="download_count" style="margin: 0px 5px 0px 5px">0</span>
+                                                <span data-lang="piece"></span>
+                                                /
+                                                <span data-lang="total"></span>
+                                                <span id="download_page" style="margin: 0px 5px 0px 5px">0</span>
+                                                <span data-lang="page"></span>
+                                                <div id="download_Top" class="fa fa-angle-double-left"></div>
+                                                <div id="download_Previous" class="fa fa-angle-left"></div>
+                                                <div id="download_PageNow">
+                                                    <input
+                                                        type="text"
+                                                        class="form-control"
+                                                        onkeyup="this.value=this.value.replace(/\D/g,'')"
+                                                        onafterpaste="this.value=this.value.replace(/\D/g,'')"
+                                                    />
+                                                </div>
+                                                <div id="download_Next" class="fa fa-angle-right"></div>
+                                                <div id="download_Bottom" class="fa fa-angle-double-right"></div>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                </li>
+                                <li class="dropdown dropdown-user">
+                                    <a
+                                        href="javascript:;"
+                                        class="dropdown-toggle"
+                                        data-toggle="dropdown"
+                                        data-hover="dropdown"
+                                        data-close-others="true"
+                                        aria-expanded="true"
+                                    >
+                                        <!--<img alt="" class="img-circle" src="../../images/user/avatar_small.jpg" />-->
+                                        <i class="icon-user bold font-blue-dark" style="font-size: 20px"></i>
+                                        <span class="username username-hide-on-mobile"> </span>
+                                        <i class="fa fa-angle-down"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-default pull-right" id="ul_user">
+                                        <li>
+                                            <a href="javascript:;" id="a_userinfo">
+                                                <i class="fa fa-user"></i><span data-lang="userInfo"></span
+                                            ></a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" id="a_password">
+                                                <i class="fa fa-key"></i><span data-lang="updatePassword"></span
+                                            ></a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <!--<li>
+                                        <a href="javascript:;"> <i class="icon-lock"></i> 锁屏 </a>
+                                    </li> -->
+                                        <li>
+                                            <a href="javascript:;" id="a_logout">
+                                                <i class="fa fa-sign-out"></i> <span data-lang="logout"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <span
+                                        id="span_endtime"
+                                        style="display: inline-block; padding: 25px 0 0 10px; color: #f00"
+                                    >
+                                    </span>
+                                </li>
+                                <li class="dropdown">
+                                    <span id="span_time" style="display: inline-block; padding: 25px 0 0 10px">
+                                        <script>
+                                            document.write(appCommon.getDateTime(new Date(), true, 'yyyy-MM-dd'));
+                                        </script>
+                                    </span>
+                                </li>
+                                <li class="dropdown">
+                                    <span id="span_version"> </span>
+                                </li>
+                                <!-- END USER LOGIN DROPDOWN -->
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- END TOP NAVIGATION MENU -->
+                </div>
+                <!-- END HEADER INNER -->
+            </div>
+            <div class="page-container" style="margin-bottom: 0 !important">
+                <!-- BEGIN SIDEBAR -->
+                <div class="page-sidebar-wrapper">
+                    <!-- BEGIN SIDEBAR -->
+                    <div class="page-sidebar navbar-collapse collapse">
+                        <ul
+                            class="page-sidebar-menu page-header-fixed page-sidebar-menu-hover-submenu page-sidebar-menu-closed"
+                            data-keep-expanded="false"
+                            data-auto-scroll="true"
+                            data-slide-speed="200"
+                        >
+                            <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+                            <li class="sidebar-toggler-wrapper hide">
+                                <div class="sidebar-toggler">
+                                    <span></span>
+                                </div>
+                            </li>
+                            <!-- END SIDEBAR TOGGLER BUTTON -->
+                            <li class="nav-item active" id="m_home">
+                                <a href="javascript:;" url="basic/dashboard/default.html" class="nav-link" id="a_home">
+                                    <!--<i class="icon-home"></i>-->
+                                    <span class="span-icon span-home span-icon-select"></span>
+                                    <span id="title" lang="homePage"></span>
+                                    <!--<span class="arrow open"></span>-->
+                                </a>
+                            </li>
+                            <li class="nav-item hidden" id="m_basicinfo">
+                                <a href="javascript:;" class="nav-link nav-toggle">
+                                    <!--<i class="icon-book-open"></i>-->
+                                    <span class="span-icon span-basic"></span>
+                                    <span id="title" lang="basicInfo"></span>
+                                    <!--<span class="arrow"></span>-->
+                                </a>
+                                <ul class="sub-menu"></ul>
+                            </li>
+                            <li class="nav-item hidden" id="m_monitor">
+                                <a href="javascript:;" class="nav-link" url="monitor/map-video/default.html">
+                                    <!--<i class="icon-pointer"></i>-->
+                                    <span class="span-icon span-monitor"></span>
+                                    <span id="title" lang="M_48"></span>
+                                    <span class="arrow"></span>
+                                </a>
+                            </li>
+                            <li class="nav-item hidden" id="m_playback">
+                                <a href="javascript:;" class="nav-link" url="play-back/video-track/default.html">
+                                    <!--<i class="fa fa-calendar"></i>-->
+                                    <span class="span-icon span-playback"></span>
+                                    <span id="title" lang="M_49"></span>
+                                    <span class="arrow"></span>
+                                </a>
+                            </li>
+                            <li class="nav-item hidden" id="m_evidence">
+                                <a href="javascript:;" class="nav-link" url="evidence-center/manage/default.html">
+                                    <!-- <span class="span-icon span-playback"></span> -->
+                                    <i class="glyphicon glyphicon-tasks evidenceicon"></i>
+                                    <span id="title" lang="M_G"></span>
+                                    <span class="arrow"></span>
+                                </a>
+                            </li>
+                            <!--<li class="nav-item hidden" id="m_evidence">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="icon-key"></i>
+                                <span class="title">证据中心</span>
+                                <span class="arrow"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="nav-item  ">
+                                    <a href="javascript:;" class="nav-link " url="evidence-center/manage/default.html">
+                                        <i class="fa fa-cog"></i>
+                                        <span class="title">证据管理</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>-->
+                            <!--<li class="nav-item hidden" id="m_alarmcenter">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="icon-bell"></i>
+                                <span class="title">报警中心</span>
+                                <span class="arrow"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="nav-item  ">
+                                    <a href="javascript:;" class="nav-link " url="alarm-center/config/default.html">
+                                        <i class="fa fa-cog"></i>
+                                        <span class="title">报警配置</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item  ">
+                                    <a href="javascript:;" class="nav-link " url="alarm-center/search/default.html">
+                                        <i class="fa fa-search"></i>
+                                        <span class="title">报警查询</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>-->
+                            <li class="nav-item hidden" id="m_report">
+                                <a href="javascript:;" class="nav-link nav-toggle">
+                                    <!--<i class="icon-bar-chart"></i>-->
+                                    <span class="span-icon span-report"></span>
+                                    <span id="title" lang="reportCenter"></span>
+                                    <span class="arrow"></span>
+                                </a>
+                                <ul class="sub-menu"></ul>
+                            </li>
+                            <!--<li class="nav-item hidden" id="m_help">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="icon-like"></i>
+                                <span class="title">帮助中心</span>
+                                <span class="arrow"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="nav-item  ">
+                                    <a href="javascript:;" class="nav-link " url="help/api/default.html">
+                                        <i class="fa fa-wordpress"></i>
+                                        <span class="title">API文档</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item  ">
+                                    <a href="javascript:;" class="nav-link " url="help/faq/default.html">
+                                        <i class="fa fa-question"></i>
+                                        <span class="title">FAQ</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>-->
+                            <li class="nav-item hidden" id="m_system">
+                                <a href="javascript:;" class="nav-link" url="systemconfig-enter/default.html">
+                                    <!--<i class="fa fa-cog"></i>-->
+                                    <span class="span-icon span-config"></span>
+                                    <span id="title" lang="M_38"></span>
+                                    <span class="arrow"></span>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- END SIDEBAR MENU -->
+                    </div>
+                    <!-- END SIDEBAR -->
+                </div>
+                <!-- END SIDEBAR -->
+                <!-- BEGIN CONTENT -->
+                <div class="page-content-wrapper">
+                    <!-- BEGIN CONTENT BODY -->
+                    <div
+                        id="div_content"
+                        class="page-content full-height-content"
+                        style="padding: 0px !important; height: 0"
+                    >
+                        <div id="div_loading" class="loader">
+                            <div class="loader-content">
+                                <!-- <img src="../../images/loading.gif" alt="Loading" /> -->
+                                <span class="circle1"></span>
+                                <div class="circle2"></div>
+                                <div class="circle3"></div>
+                            </div>
+                        </div>
+                        <div id="div_tabs" style="width: 100%; height: 100%"></div>
+                    </div>
+                    <!-- END CONTENT BODY -->
+                </div>
+                <!-- END CONTENT -->
+            </div>
+            <!-- END CONTAINER -->
+            <!-- BEGIN FOOTER -->
+            <!-- <div class="page-footer">
+            <div class="page-footer-inner"> 2016 &copy;admin By </div>
+            <div class="scroll-to-top">
+                <i class="icon-arrow-up"></i>
+            </div>
+        </div> -->
+            <!-- END FOOTER -->
+        </div>
+        <div id="div_userinfo" class="modal fade in" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" aria-hidden="true" data-dismiss="modal"></button>
+                        <h4 class="modal-title"><span data-lang="userInfo"></span></h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="info-item">
+                            <i class="fa fa-user font-green"></i>
+                            <span id="span_username"></span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fa fa-group font-green"></i>
+                            <span id="span_rolename"></span>
+                        </div>
+                        <div class="tabbable-line" id="div_tab">
+                            <ul class="nav nav-tabs">
+                                <li class="active">
+                                    <a href="#tab_module" data-toggle="tab"><span data-lang="module"></span></a>
+                                </li>
+                                <li>
+                                    <a href="#tab_group" data-toggle="tab"><span data-lang="M_12"></span></a>
+                                </li>
+                                <li>
+                                    <a id="a_previewchannel" data-toggle="tab" href="#div_previewchannel"
+                                        ><span data-lang="channelAuthority"></span
+                                    ></a>
+                                </li>
+                            </ul>
+                            <div class="tab-content" style="height: 560px; overflow: auto">
+                                <div class="tab-pane active" id="tab_module">
+                                    <table class="table table-bordered table-striped table-condensed">
+                                        <thead>
+                                            <tr>
+                                                <th><span data-lang="module"></span></th>
+                                                <th><span data-lang="moduleAuthority"></span></th>
+                                                <th><span data-lang="operateAuthority"></span></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+                                </div>
+                                <div class="tab-pane" id="tab_group">
+                                    <ul id="ul_group" class="ztree"></ul>
+                                </div>
+                                <div
+                                    class="tab-pane fade"
+                                    id="div_previewchannel"
+                                    style="height: 400px; overflow: auto"
+                                >
+                                    <div class="form-group">
+                                        <ul id="ul_channel" class="ztree"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="div_password" class="modal fade in" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" aria-hidden="true" data-dismiss="modal"></button>
+                        <h4 class="modal-title"><span data-lang="updatePassword"></span></h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form form-vertical" id="form_password">
+                            <div class="form-group">
+                                <label class="control-label" for="inp_oldpassword" data-lang="oldPassword"></label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-key font-blue"></i></span>
+                                    <input
+                                        class="form-control"
+                                        type="password"
+                                        id="inp_oldpassword"
+                                        name="oldPassword"
+                                    />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="inp_newpassword" data-lang="newPassword"></label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-key font-blue"></i></span>
+                                    <input class="form-control" type="password" id="inp_newpassword" name="password" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label
+                                    class="control-label"
+                                    for="inp_repeatpassword"
+                                    data-lang="repeatPassword"
+                                ></label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-key font-blue"></i></span>
+                                    <input
+                                        class="form-control"
+                                        type="password"
+                                        id="inp_repeatpassword"
+                                        name="repeatPassword"
+                                    />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn green" id="btn_submit">
+                            <i class="fa fa-check"></i><span data-lang="sure"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="div_filelist" class="modal fade in" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" aria-hidden="true" data-dismiss="modal"></button>
+                        <h4 class="modal-title"><span data-lang="fileList"></span></h4>
+                    </div>
+                    <div class="modal-body" style="height: 500px; overflow-y: auto">
+                        <ul id="ul_filelist" class="list-group"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="div_animation" style="position: absolute; z-index: 10000; display: none">
+            <button class="btn btn-circle dark btn-outline" style="background: #fff">
+                <i class="icon-cloud-download font-lg"></i>
+            </button>
+        </div>
+        <!--[if lt IE 9]>
+            <script src="/third-resource/metronic47/global/plugins/respond.min.js"></script>
+            <script src="/third-resource/metronic47/global/plugins/excanvas.min.js"></script>
+        <![endif]-->
+        <!--core plugin-->
+
+        <script
+            type="text/javascript"
+            src="/third-resource/metronic47/global/plugins/bootstrap/js/bootstrap.min.js"
+        ></script>
+        <!--page level plugin-->
+        <script
+            type="text/javascript"
+            src="/third-resource/metronic47/global/plugins/jquery-validation/js/jquery.validate.min.js"
+        ></script>
+        <script type="text/javascript" src="/third-resource/lava/jquery.lava-tabs.js"></script>
+        <script charset="utf-8" src="/third-resource/lava/jquery.lava-msg.js"></script>
+        <script
+            charset="utf-8"
+            src="/third-resource/metronic47/global/plugins/jquery-validation/js/jquery.validate.min.js"
+        ></script>
+        <script charset="utf-8" src="/third-resource/base64/base64.min.js"></script>
+        <script
+            type="text/javascript"
+            src="/third-resource/metronic47/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js"
+        ></script>
+        <!--theme global-->
+        <script type="text/javascript" src="/third-resource/metronic47/global/scripts/app.min.js"></script>
+        <script
+            type="text/javascript"
+            src="/third-resource/metronic47/layouts/layout/scripts/layout.min.js"
+        ></script>
+        <!--page level-->
+        <script charset="utf-8" src="/third-resource/zTreeV3/js/jquery.ztree.all.min.js"></script>
+
+        <script type="text/javascript" src="/third-resource/socket/socket.io.js"></script>
+        <script type="text/javascript" src="/third-resource/base64/base64.min.js"></script>
+        <script type="text/javascript" src="/third-resource/crypto/crypto-js.js"></script>
+        <script type="text/javascript" src="/basic/home/script/default.js"></script>
+    </body>
+</html>

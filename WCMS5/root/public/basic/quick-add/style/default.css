@@ -1,0 +1,38 @@
+.form-wizard .step-line>li {
+	margin:0px;
+}
+.form-wizard .step-line>li>a {
+	padding: 0px;
+	background-color: #fff !important;
+}
+.bootstrap-tagsinput {
+	display: block;
+}
+.footer {
+	position: fixed;
+	bottom: 0;
+    width: 100%;
+	padding:5px;
+	background-color: #eee;
+	margin-top: 10px;
+}
+#form_group {
+	position:fixed; 
+	top:15px;bottom:50px;
+	overflow: auto;
+}
+.bootstrap-maxlength{
+	z-index:20000 !important;
+}
+.ztree li a.curSelectedNode {
+	background-color: #FFE6B0;
+	border: 1px solid #FFB951;
+}
+.sp_channel {
+	display: inline-block;
+	width: 17px;
+}
+.sp_all {
+	display: inline-block;
+	width: 35px;
+}

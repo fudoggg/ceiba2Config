@@ -1,0 +1,144 @@
+.ztree li .button {
+	vertical-align:initial;
+}
+
+.glyphicon {
+  font-family: 'Glyphicons Halflings';
+}
+.form-group p {
+	margin:5px 0 0 0;
+}
+table .fa {
+	font-size:16px;
+	cursor: pointer;
+}
+table .fa-edit {
+	color:#07d;
+}
+table .fa-trash-o {
+	color:#b40;
+}
+
+.plate {
+	position:relative;
+	padding:3px 1px;
+	border:1px solid #eee;
+	background: #fff;
+	font-size:12px;
+}
+.plate>span {
+	padding:2px 8px;
+}
+.plate-blue {
+	border:1px solid #006ed6;
+}
+.plate-yellow {
+	border:1px solid #888;
+}
+.plate-black {
+	border: 1px solid #333435;
+}
+.plate-white {
+	border: 1px solid #aaa;
+}
+.plate-green {
+	border: 1px solid #084;
+}
+.plate-other {
+	border: 1px solid #ccc;
+}
+.plate-blue:before, .plate-black:before, .plate-green:before {
+	position:absolute;
+	left:20%;
+	top:1px;
+	display: block;
+	width:2px;
+	height:2px;
+	content:"";
+	background: #fff;
+}
+.plate-blue:after, .plate-black:after, .plate-green:after {
+	position:absolute;
+	left:80%;
+	top:1px;
+	display: block;
+	width:2px;
+	height:2px;
+	content:"";
+	background: #fff;
+}
+.plate-yellow:before, .plate-white:before, .plate-other:before {
+	position:absolute;
+	left:20%;
+	top:1px;
+	display: block;
+	width:2px;
+	height:2px;
+	content:"";
+	background: #555;
+}
+.plate-yellow:after, .plate-white:after, .plate-other:after {
+	position:absolute;
+	left:80%;
+	top:1px;
+	display: block;
+	width:2px;
+	height:2px;
+	content:"";
+	background: #555;
+}
+.plate-blue>span {
+	background: #006ed6;
+	color:#fff;
+}
+.plate-yellow>span {
+	background: #eee900;
+	color:#000;
+}
+.plate-black>span {
+	background: #333435;
+	color:#fff;
+}
+.plate-white>span {
+	border:1px solid #bbb;
+	background: #fff;
+	color:#555;
+}
+.plate-green>span {
+	background: #084;
+	color:#fff;
+}
+.plate-other>span {
+	background: #ccc;
+	color:#333;
+}
+.fa-refresh{
+	cursor:pointer;
+}
+.ztree li a.curSelectedNode {
+	background-color: #FFE6B0;
+	border: 1px solid #FFB951;
+}
+.sp_channel {
+	display: inline-block;
+	width: 25px;
+}
+.webuploader-pick {
+    padding: 10px 0px;
+    width: 150px;
+}
+#importBtn > .webuploader-pick {
+    background-color: #1BBC9B;
+	padding-top: 9px !important;
+	padding-bottom: 7px !important;
+	border-radius: 0px !important;
+    width: 110px !important;
+    height: 34px;
+}
+#importBtn > .webuploader-pick-hover {
+	background-color: #048d61;
+}
+#downloadBtn {
+	width:110px;
+	margin-left:30px;
+}

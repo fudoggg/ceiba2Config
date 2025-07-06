@@ -1,0 +1,68 @@
+/*   .ztree li .button{
+	vertical-align: initial;
+}
+.ztree li .diy1_ico_open, .ztree li .diy1_ico_close{
+	 position: relative;
+	top: 1px;
+	display: inline-block;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family:'FontAwesome';
+	background-image: none; 
+	display:inline-block;
+	width:16px;
+	font-family:"FontAwesome";
+	font-style:normal;
+	position:relative;
+	top:1px;
+	font-weight: 400;
+	line-height: 1;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+}
+.ztree li .diy1_ico_open:before{
+	content:"\f07c";
+}
+.ztree li .diy1_ico_close:before{
+	content:"\f07b";
+}
+.ztree li .ico_docu:before{
+	content:"\f1b9;
+}   */
+.ztree li .button {
+	vertical-align:initial;
+}
+
+.glyphicon {
+    font-family: 'Glyphicons Halflings';
+}
+.form-group p {
+	margin:5px 0 0 0;
+}
+table .fa {
+	font-size:16px;
+	cursor: pointer;
+}
+table .fa-edit {
+	color:#07d;
+}
+table .fa-trash-o {
+	color:#b40;
+}
+.bootstrap-maxlength{
+	z-index:20000 !important;
+}
+.loader{
+	position:fixed;
+	left:15px;
+	z-index:1000;
+	/*display:none;*/
+	content:"\e090";
+}
+.ztree li a.curSelectedNode {
+	background-color: #FFE6B0;
+	border: 1px solid #FFB951;
+}
