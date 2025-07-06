@@ -18,6 +18,7 @@
 /WCMS5/root/*
 !/WCMS5/root/public
 /WCMS5/root/public/*
+!/WCMS5/root/public/basic
 !/WCMS5/root/public/locale
 /WCMS5/root/public/locale/*
 !/WCMS5/root/public/locale/Russian
