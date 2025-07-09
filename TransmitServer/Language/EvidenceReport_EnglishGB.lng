@@ -1,0 +1,26 @@
+[ReportField]
+title 		 	= EVIDENCE REPORT CARD
+EvidenceName 	= Evidence name
+EvidenceDate 	= Evidence date
+VehicleNumber 	= Vehicle number
+DriverName		= Driver name
+CreationTime	= Creation time
+EvidenceProcessingDescription = Description of evidence processing
+Map				= Map
+EvidencePhotograph = Evidence photograph
+Date			= Date
+Signature		= Signature
+Latitude		= Latitude
+Longitude		= Longitude
+Address			= Address
+Direction		= Direction
+
+[Direction]
+north		= North
+northeast		= Northeast
+east 		= East
+southeast 		= Southeast
+south		= South
+southwest		= Southwest
+west		= West
+northwest		= Northwest

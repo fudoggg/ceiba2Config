@@ -1,0 +1,16 @@
+[EviMigrate]
+Analysing=Analysing
+AnalysisCompleted=Analysis Completed
+AnalysisStatus=AnalysisStatus
+EviId=EviId
+Loading=Loading...
+ReLoad=ReLoad
+StartAnalysis=StartAnalysis
+StopAnalysis=StopAnalysis
+Title=EviMigrateTool
+UnAnalysisTip=Number of unanalyzed evidence:%d
+WaitAnalysis=Wait Analysis
+AnalysisSum=AnalysisSum:
+AnalysisDate=AnalysisDate:
+StartTime=StartTime
+EndTime=EndTime

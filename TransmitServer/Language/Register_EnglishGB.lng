@@ -1,0 +1,21 @@
+[RegtypeDlg]
+x1=Select Registration Type
+x2=Registration Type
+x3=Welcome to the registration procedures of MDR
+x4=Registration Step 1
+x5=The machine code is
+x6=Please enter your machine code and serial number to get registration code 
+x7=Registration Information
+x8=Machine code
+x9=Product Serial Number
+x10=Close
+x11=Next
+x12=Registration Step 2
+x13=Please enter your serial number
+x14=Registration code
+x15=Return
+x16=Register
+x17=Registration error, please re-enter
+x18=Registration success
+x19=OK
+x20=Cancel

@@ -1,0 +1,18 @@
+[102]
+10=暗号文は空にできません。入力してください！
+1002=暗号文タイプ
+1003=Authorize
+1004=暗号文
+1005=ファイル
+1006=承認を削除
+11=暗号文の長さが64文字の制限を超えています。変更してください！
+12=認証ファイルの書き込みに失敗しました。エラーコード：
+13=Authorization successful!
+14=Authorization failed!
+15=暗号文が無効です。有効な暗号文を取得するには、Streamaxに連絡してください！
+16=認証ファイルを削除してもよろしいですか？
+17=認証ファイルが削除されました！
+18=認証ファイルが見つかりません！
+19=The authentication function is "carefully used". Once the authentication is completed, the terminal device will be written to the authentication code and cannot be changed. If it is to be modified, it will need to provide the corresponding device serial number and apply for a change to the solution company. If users who use this function already need to re authenticate after reinstalling the server, the authentication code should be consistent with the previous ones, so please keep the certificate number properly, if you have forgotten or lost it, please apply to the solution company.
+20=Warning
+6=Authorize Tool

@@ -1,0 +1,18 @@
+[EviMigrate]
+WaitAnalysis=Esperando análisis
+StopAnalysis=Parar análisis
+StartThanEnd=Hora de inicio mayor que la final
+StartTime=Hora de inicio
+StartAnalysis=Empezar análisis
+ReLoad=Recarga
+UnAnalysisTip=Cantidad de pruebas no analizadas:%d
+Loading=Cargando...
+DBError=Inicializar la base de datos con error
+Title=Herramienta para migrar pruebas
+EviId=Prueba ID
+EndTime=Hora de finalización
+AnalysisSum=Suma de pruebas
+AnalysisStatus=Estado de análisis
+AnalysisDate=Hora de análisis
+AnalysisCompleted=Análisis terminado
+Analysing=Analizando

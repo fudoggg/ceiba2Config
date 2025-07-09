@@ -1,0 +1,25 @@
+[Direction]
+east=Восток
+north=Север
+northeast=СВ
+northwest=СЗ
+south=Юг
+southeast=ЮВ
+southwest=ЮЗ
+west=Запад
+[ReportField]
+Address=Адрес
+CreationTime=Время создания
+Date=Дата
+Direction=Направление
+DriverName=Имя водителя
+EvidenceDate=Дата доказательства
+EvidenceName=Наименование доказательства
+EvidencePhotograph=Снимок доказательства
+EvidenceProcessingDescription=Описание процесса доказательства
+Latitude=Широта
+Longitude=Долгота
+Map=Карта
+Signature=Подпись
+VehicleNumber=Номер ТС
+title=Отчет о доказательстве

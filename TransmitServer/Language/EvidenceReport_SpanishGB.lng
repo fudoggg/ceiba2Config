@@ -1,0 +1,25 @@
+[ReportField]
+VehicleNumber=No.matrícula
+title=Informe de Pruebas
+Signature=Firma
+Map=Mapa
+Longitude=Longitud
+Latitude=Latitud
+EvidenceProcessingDescription=Descripción
+EvidencePhotograph=Foto de prueba
+EvidenceName=Nombre de prueba
+EvidenceDate=Fecha de Prueba
+DriverName=Conductor
+Direction=Dirección
+Date=Fecha
+CreationTime=Fecha de creación
+Address=Dirección
+[Direction]
+west=Oeste
+southwest=Suroeste
+southeast=Sureste
+south=Sur
+northwest=Noroeste
+northeast=noreste
+north=Norte
+east=Este

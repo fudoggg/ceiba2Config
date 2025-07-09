@@ -1,0 +1,21 @@
+[RegtypeDlg]
+x9=Número serial del producto:
+x8=Código de máquina
+x7=Información de registración
+x6=Ingrese su código de máquina y número serial para el código de registración
+x5=Su código de máquina:
+x4=Paso de registración 1
+x3=Bienvenido al programa de registración DVR
+x20=Cancelar
+x2=Tipo de registración
+x19=Aceptar
+x18=Registración exitosa
+x17=Error al registrarse, reinténtalo
+x16=Registrar
+x15=Anterior
+x14=Código de registración:
+x13=Ingrese su código de registración
+x12=Paso de registración 2
+x11=Siguiente
+x10=Cerrar
+x1=Elija el tipo de registración

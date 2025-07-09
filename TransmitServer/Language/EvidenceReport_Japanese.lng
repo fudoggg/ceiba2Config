@@ -1,0 +1,25 @@
+[Direction]
+east=東
+north=北
+northeast=東北
+northwest=西北
+south=南
+southeast=東南
+southwest=西南
+west=西
+[ReportField]
+Address=Address
+CreationTime=作成日
+Date=日付
+Direction=方向
+DriverName=運転者
+EvidenceDate=証拠日付
+EvidenceName=証拠名称
+EvidencePhotograph=キャプチャ
+EvidenceProcessingDescription=解説
+Latitude=緯度
+Longitude=経度
+Map=地図
+Signature=サイン
+VehicleNumber=Vehicle number
+title=証拠レポート

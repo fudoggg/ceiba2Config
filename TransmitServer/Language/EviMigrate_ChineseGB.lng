@@ -1,0 +1,17 @@
+[EviMigrate]
+Title             			= 证据迁移工具
+StartAnalysis     		= 开始分析
+StopAnalysis      		= 停止分析
+ReLoad            		= 重新加载
+UnAnalysisTip     		= 未分析证据数:%d
+Loading           		= 加载中...
+EviId             			= 证据ID
+AnalysisStatus    		= 分析状态
+WaitAnalysis      		= 等待分析
+Analysing         		= 分析中
+AnalysisCompleted 	= 分析完成
+AnalysisSum			= 证据总数：
+AnalysisDate			= 时间：
+StartTime					= 开始时间：
+EndTime					= 结束时间：
+

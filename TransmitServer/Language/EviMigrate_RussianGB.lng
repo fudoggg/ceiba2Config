@@ -1,0 +1,16 @@
+[EviMigrate]
+Analysing=Анализ
+AnalysisCompleted=Анализ завершен
+AnalysisDate=Дана анализа:%s
+AnalysisStatus=Сост.анализа
+AnalysisSum=Итог:%d
+EndTime=Время окон.
+EviId=ID доказ-во
+Loading=Загруж. ...
+ReLoad=Загруж.снова
+StartAnalysis=Начать анализ
+StartimeTime=Нач.время
+StopAnalysis=Остан.анализ
+Title=EviMigrateTool
+UnAnalysisTip=Число необработанное:%d
+WaitAnalysis=Ждать анализ

@@ -1,0 +1,18 @@
+[Authorize]
+102_6=Authorize Tool
+102_1002=Ciphertext Type:
+102_1003=Authorize
+102_1004=Ciphertext
+102_1005=File
+102_1006=Delete Authorization
+102_10=Ciphertext can not be empty, please input!
+102_11=Ciphertext length exceeds limit of 64 characters, please modify!
+102_12=Write certification file failed, error code:
+102_13=Authorization successful!
+102_14=Authorization failed!
+102_15=Invalid ciphertext, please contact Streamax to obtain valid ciphertext!
+102_16=Are you sure to delete the authorization file?
+102_17=Authorization file has been deleted!
+102_18=No authorization file found!
+102_19=The authentication function is "carefully used". Once the authentication is completed, the terminal device will be written to the authentication code and cannot be changed. If it is to be modified, it will need to provide the corresponding device serial number and apply for a change to the solution company. If users who use this function already need to re authenticate after reinstalling the server, the authentication code should be consistent with the previous ones, so please keep the certificate number properly, if you have forgotten or lost it, please apply to the solution company.
+102_20=Warning

@@ -1,0 +1,16 @@
+[EviMigrate]
+Analysing=分析中
+AnalysisCompleted=分析完了
+AnalysisDate=分析時間 :
+AnalysisStatus=分析状態
+AnalysisSum=証拠総数 :
+EndTime=終了時間
+EviId=証拠ID
+Loading=ロード中
+ReLoad=リロード
+StartAnalysis=分析開始
+StartimeTime=開始時間
+StopAnalysis=分析停止
+Title=証拠移行ツール
+UnAnalysisTip=未分析証拠数 :%d
+WaitAnalysis=分析待機

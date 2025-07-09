@@ -1,0 +1,18 @@
+[102]
+19=Utilice la función de autenticación con cuidado. Una vez completada la autenticación, se escribirá el código de autenticación en el dispositivo terminal y no se puede cambiar. Si desea modificarlo, proporcione el número de serie del dispositivo correspondiente y solicite modificación a la empresa para soluciones. Si ya ha utilizado esta función, volverá a autenticarse después de reinstalar el servidor, con el mismo código, por lo tanto, guarde bien el código. Si lo olvida o lo pierde, solicite la provisión a la empresa de soluciones.
+15=Texto cifrado inválido, ¡comuníquese con Streamax para un texto válido
+11=Texto cifrado exede el límite de 64 caracteres, modifíquelo
+16=¿Está seguro de que desea borrar el archivo de autorización?
+12=Error al escribir el archivo de certificación, código de error:
+10=Texto cifrado vacío, ingrese por favor
+17=Archivo de autorización borrado
+18=Archivo autorización no encontrado
+13=Autorización exitosa
+14=Autorización fallida
+1006=Borrar autorización
+1002=Tipo de texto cifrado
+6=Herramienta de autorización
+1004=Texto cifrado
+1003=Autorización
+20=Advertencia
+1005=Archivo
