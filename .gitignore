@@ -28,5 +28,4 @@
 !/TransmitServer
 /TransmitServer/*
 !TransmitServer/Language
-/TransmitServer/Language/*
-!TransmitServer/Language/AlarmType_RussianGB.lng
+!/TransmitServer/Language/
